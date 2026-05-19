@@ -1,45 +1,73 @@
 # Driver Monitoring Dataset (DMD)
 
-**Important**: Due to licence revision, material from specific participants has been removed and will no longer be public. In addition, serving and maintaining a dataset of this size required a significant effort and affected its accessibility. For this, we decided to reduce the content. Recordings done in the simulator will not be public, and IR and Depth material will also be removed to facilitate the dataset downloading process. Only RGB material will be available. Thanks for your understanding.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Website](https://img.shields.io/badge/Official-Website-blue)](http://dmd.vicomtech.org/)
+[![Wiki](https://img.shields.io/badge/Project-Wiki-green)](https://github.com/Vicomtech/DMD-Driver-Monitoring-Dataset/wiki)
 
-The [Driver Monitoring Dataset](http://dmd.vicomtech.org/) is the largest visual dataset for real driving actions, with footage from synchronized multiple cameras (body, face, hands) and multiple streams (RGB, Depth, IR) recorded in two scenarios (real car, driving simulator). Different annotated labels related to distraction, fatigue and gaze-head pose can be used to train Deep Learning models for Driver Monitor Systems.
+The **Driver Monitoring Dataset (DMD)** is a comprehensive visual dataset designed for real-world driving action recognition. It features synchronized footage from multiple camera angles to support the development of Deep Learning models for Driver Monitoring Systems (DMS).
 
-This project includes a tool to annotate the dataset, inspect the annotated data and export training sets. Output annotations are formatted using [OpenLABEL](https://www.asam.net/standards/detail/openlabel/) language [VCD (Video Content Description)](https://vcd.vicomtech.org/).
+> [!IMPORTANT]
+> **Dataset Revision (2026):** Due to license updates and hosting constraints, the dataset has been streamlined. Simulator recordings, IR, and Depth streams have been removed. **Only RGB material from the real-car scenario is currently available.**
+> 
+> To comply with revised privacy and licensing agreements, only material from the following subjects is unrestricted for use:
+> ### 👥 **Subject IDs:** 1, 5, 6, 7, 9, 10, 13, 14, 23, 28, 29, 33, 36, 37
 
-## Dataset details
-More details of the recording and video material of DMD can be found at the [official website](http://dmd.vicomtech.org/)
+---
 
-In addition, this repository [wiki](https://github.com/Vicomtech/DMD-Driver-Monitoring-Dataset/wiki) has useful information about the DMD dataset and the annotation process.
+## 📊 Dataset Highlights
+The DMD provides rich annotations for distraction, fatigue, and gaze-head pose estimation.
 
-## Available tools:
-- Temporal Annotation Tool (TaTo) - (more info [here](annotation-tool/README.md)) 
-- Dataset Explorer Tool (DEx) - (more info [here](exploreMaterial-tool/README.md))
-### Annotation Instructions
-Depending the annotation problem, different annotation criteria should be defined to guarantee all the annotators produce the same output annotations.  
+| Feature | Description |
+| :--- | :--- |
+| **Scenarios** | Real-car driving (Simulator data deprecated) |
+| **Streams** | RGB (Body, Face, and Hands views) |
+| **Format** | [OpenLABEL](https://www.asam.net/standards/detail/openlabel/) / [VCD (Video Content Description)](https://vcd.vicomtech.org/) |
+| **Labels** | Distraction actions, fatigue levels, gaze, and head pose |
 
-We have defined the following criteria to be used with tool to produce consistent annotations:
 
-- [DMD Distraction-related actions](https://github.com/Vicomtech/DMD-Driver-Monitoring-Dataset/wiki/DMD-distraction-related-action-annotation-criteria) annotation
 
-## Known Issues
-- The version of OpenLABEL in the annotation files (OpenLabel) and in the tools in this repository has been updated to VCD>=5.0. Make sure you download the annotations files again and update the tools. 
-- There was an error when uploading IR videos. They have to be .mp4 format, and they were uploaded as .avi. This is fixed now but requires the user to download them again. 
+---
 
-## Credits
-Development of DMD was supported and funded by the European Commission (EC) Horizon 2020 programme (project [VI-DAS](http://www.vi-das.eu/), grant agreement 690772) 
+## 🛠 Available Tools
+This repository provides the essential ecosystem for interacting with DMD data:
 
-Developed with :blue_heart: by:
+* **[TaTo (Temporal Annotation Tool)](annotation-tool/README.md):** A specialized tool for annotating temporal actions and events.
+* **[DEx (Dataset Explorer)](exploreMaterial-tool/README.md):** A tool to inspect annotated data and export customized training sets.
 
-* Paola Cañas (pncanas@vicomtech.org)
-* Juan Diego Ortega (jdortega@vicomtech.org)
+### Annotation Standards
+To ensure consistency across annotators, we follow strict criteria:
+* **[Distraction-related Action Criteria](https://github.com/Vicomtech/DMD-Driver-Monitoring-Dataset/wiki/DMD-distraction-related-action-annotation-criteria):** Detailed definitions for consistent labeling.
 
-Contributions of ideas and comments: Marcos Nieto, Mikel Garcia, Gonzalo Pierola, Itziar Sagastiberri, Itziar Urbieta, Eneritz Etxaniz, Orti Senderos. 
+---
 
-## License 
-Copyright :copyright: 2024 Vicomtech
+## ⚠️ Known Issues
+* **OpenLABEL Compatibility:** The tools and annotation files now use **VCD >= 5.0**. Make sure you download the latest annotation files and update the tools.
+* **Video Formats:** All video assets are now in `.mp4` format. If you have older `.avi` versions of IR videos, please replace them with the current versions.
+
+---
+
+## 🎓 Research & Citation
+If you use DMD in your research, please refer to the [Official Website](http://dmd.vicomtech.org/) for the preferred citation format.
+
+### Acknowledgments
+DMD was funded by the European Commission (EC) Horizon 2020 programme via the [VI-DAS project](http://www.vi-das.eu/) (Grant 690772).
+
+**Developed with 💙 by:**
+* **Paola Cañas** (pncanas@vicomtech.org)
+* **Juan Diego Ortega** (jdortega@vicomtech.org)
+* *Contributors:* Marcos Nieto, Mikel Garcia, Gonzalo Pierola, Itziar Sagastiberri, Itziar Urbieta, Eneritz Etxaniz, Orti Senderos.
+
+---
+
+## 📄 License
+Copyright © 2026 Vicomtech. Distributed under the **MIT License**.
+
+<details>
+<summary><b>View Full License Text</b></summary>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</details>
