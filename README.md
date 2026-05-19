@@ -49,6 +49,12 @@ To ensure consistency across annotators, we follow strict criteria:
 ## 🎓 Research & Citation
 If you use DMD in your research, please refer to the [Official Website](http://dmd.vicomtech.org/) for the preferred citation format.
 
+## 🚀 Community & Research
+The following projects and research works utilize the DMD:
+
+* **[dmd-to-3pdd-builder](https://github.com/azizoglu/dmd-to-3pdd-builder):** A tool for building the 3 Perspective Driver Dataset (3PDD) from the Driver Monitoring Dataset (DMD).
+(Please, take into consideration tha data availability update from 2026.)
+
 ### Acknowledgments
 DMD was funded by the European Commission (EC) Horizon 2020 programme via the [VI-DAS project](http://www.vi-das.eu/) (Grant 690772).
 
